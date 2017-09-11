@@ -1,0 +1,23 @@
+<% include partials/header %>
+
+<div class="container">
+    <div class="jumbotron">
+      <h1>MOVIE LIST</h1>
+      <p class="lead">
+        <a class="btn btn-warning btn-lg" href="/" role="button">SEARCH AGAIN</a>
+      </p>
+    </div>
+    
+    <div class="row result_row">
+        <% result["results"].forEach(function(movie){ %>
+            <div class="col-md-4 col-sm-6 thumbnail columns">
+                <strong> <h1 class="text-center"><%= movie["title"] %></h1> </strong>
+                <h4 class="text-center">Release date : <%= movie["release_date"] %></h4> 
+                <h4 class="text-center">Popularity : <%= movie["popularity"] %></h4>
+                <img src="<%= 'https://image.tmdb.org/t/p/w640/' + movie["poster_path"] %>" style="height:300px;" style="width:300px;" alt="no img"/><br>
+            </div>
+        <% }); %>
+    </div>
+</div>
+
+<% include partials/footer %>

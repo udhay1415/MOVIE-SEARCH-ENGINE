@@ -1,0 +1,14 @@
+<% include partials/header %>
+
+<div id="form_container" class="container">
+    <h1 class="form_header text-center">MOVIE SEARCH</h1>
+    
+    <form action="/movies" method="GET" class="form-inline text-center">
+      <label class="sr-only" for="inlineFormInput">Name</label>
+      <input type="text" class="form-control mb-4 mr-sm-4 mb-sm-0" id="inlineFormInput" placeholder="movie name" name="data">
+      <input type="submit" class="btn btn-warning btn-md">
+    </form>
+</div>
+
+
+<% include partials/footer %>
